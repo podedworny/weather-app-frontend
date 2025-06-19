@@ -1,6 +1,7 @@
 import {Nunito} from 'next/font/google';
 import "../lib/fontawesome";
 import './global.css'
+import TopBar from "../components/TopBar";
 
 const nunito = Nunito({
   subsets: ['latin'],
@@ -8,8 +9,8 @@ const nunito = Nunito({
 
 
 export const metadata = {
-  title: 'WeatherApp',
-  description: 'WeatherApp with localization',
+  title: 'Prognoza pogody',
+  description: 'Prognoza pogody na 7 dni',
   icons: {
     icon: '/favicon.ico',
   }
@@ -22,7 +23,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={nunito.className}>
-      <body>{children}</body>
+      <body>
+      <TopBar />
+      {children}
+      </body>
     </html>
   )
 }

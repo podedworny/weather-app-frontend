@@ -72,11 +72,6 @@ export default function Home() {
    const [summary, setSummary] = useState<SummaryWeather>();
    const [position, setPosition] = useState<LatLngExpression>(null);
     return (<main>
-        <div id="title">
-            <p>
-                Prognoza pogody
-            </p>
-        </div>
         <div id="search">
             <GooglePlacesAutocomplete
                 apiKey={process.env.NEXT_PUBLIC_GOOGLE_API_KEY}
