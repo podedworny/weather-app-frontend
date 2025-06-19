@@ -2,23 +2,39 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: solid;
-    border-radius: 20px;
-    padding: 10px;
-    gap: 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    background-color: white;
+    padding: 15px;
+    gap: 12px;
     text-align: center;
-    width: 150px;
+    width: 160px;
     max-width: 300px;
     transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.wrapper:hover {
+    border-color: #bbb;
 }
 
 .icon {
     display: flex;
     justify-content: center;
+    margin-bottom: 5px;
 }
 
 .info p {
-    margin: 5px 0;
+    margin: 6px 0;
+    color: #444;
+    font-size: 0.95rem;
+}
+
+.info p:first-child {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #222;
+    margin-bottom: 10px;
 }
 
 @media (max-width: 768px) {
@@ -30,18 +46,28 @@
         max-width: 400px;
         margin: 0 auto;
         text-align: left;
-        transition: all 0.3s ease;
+        padding: 12px;
     }
 
     .icon {
         flex: 0 0 auto;
-        margin-right: 20px;
+        margin-right: 15px;
+        margin-bottom: 0;
+        margin-left: 15px;
     }
 
     .info {
         flex: 1;
         display: flex;
         flex-direction: column;
-        gap: 4px;
+        gap: 5px;
     }
+
+    .info p:first-child {
+        margin-bottom: 8px;
+    }
+}
+.energyTooltip {
+    cursor: help;
+    border-bottom: 1px dotted #999;
 }

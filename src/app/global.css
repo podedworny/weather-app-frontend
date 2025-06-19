@@ -7,14 +7,17 @@ main {
     display: grid;
     justify-content: center;
     align-items: center;
-    padding-top: 100px;
-    gap: 10px;
-    padding-bottom: 10px;
+    padding-top: 70px;
+    gap: 5px;
+    padding-bottom: 5px;
+    width: 100%;
 }
 
 body {
     margin: 0;
     padding: 0;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 #weather {
@@ -27,10 +30,14 @@ body {
     box-sizing: border-box;
 }
 
-@media (width: 1200px) {
+@media (max-width: 768px) {
     #weather {
         flex-direction: column;
         align-items: center;
+    }
+
+    #search, #map, #weather, #footer {
+        width: 95vw;
     }
 }
 
@@ -38,9 +45,20 @@ body {
     padding: 5px;
 }
 
-
 #search, #map, #weather, #footer {
     width: 75vw;
     margin: 0 auto;
     box-sizing: border-box;
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    #search, #map, #weather, #footer {
+        width: 95vw;
+    }
 }

@@ -36,7 +36,11 @@ export default function WeatherWindow({data}: {data: WeeklyWeather}) {
                 <p>{data.Date}</p>
                 <p>Min temp. {data.MinTemperature} °C</p>
                 <p>Max temp. {data.MaxTemperature} °C</p>
-                <p>Energia {data.EstimatedGeneratedEnergy} kWh</p>
+                <p>
+                    <span className={styles.energyTooltip} title="Szacowana energia wyprodukowana przez panele słoneczne">
+                        Energia {data.EstimatedGeneratedEnergy} kWh
+                    </span>
+                </p>
             </div>
         </div>
     );
