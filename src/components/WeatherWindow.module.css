@@ -1,0 +1,19 @@
+.div {
+    border: solid;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    flex-direction: column;
+    padding: 10px;
+    width: 8vw;
+    height: auto;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.div p {
+    margin: 5px 0;
+}
