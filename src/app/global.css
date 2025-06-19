@@ -8,6 +8,8 @@ main {
     justify-content: center;
     align-items: center;
     padding-top: 100px;
+    gap: 10px;
+    padding-bottom: 10px;
 }
 
 body {
@@ -17,11 +19,28 @@ body {
 
 #weather {
     display: flex;
-    padding: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
+    width: 75vw;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
+@media (width: 1200px) {
+    #weather {
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
 #search {
     padding: 5px;
+}
+
+
+#search, #map, #weather, #footer {
+    width: 75vw;
+    margin: 0 auto;
+    box-sizing: border-box;
 }

@@ -96,15 +96,19 @@ export default function Home() {
                 }}
             />
         </div>
+        <div id="map">
         <Map mapCenter={position} mapClickAction={(latLng) => {
             getWeeklyWeather(latLng.lat, latLng.lng).then(data => setWeathers(data));
             getWeatherSummary(latLng.lat, latLng.lng).then(data => setSummary(data));
         }} />
+        </div>
         <div id="weather">
             {weathers.length === 7 && weathers.map((w, i) => (
                 <WeatherWindow key={i} data={w} />
             ))}
         </div>
+        <div id="footer">
         {summary && (<Footer data={summary} />)}
+        </div>
     </main>)
 }

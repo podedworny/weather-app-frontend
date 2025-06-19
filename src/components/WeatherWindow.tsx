@@ -28,12 +28,16 @@ function getWeatherIcon(weatherCode: number) {
 
 export default function WeatherWindow({data}: {data: WeeklyWeather}) {
     return (
-        <div className={styles.div}>
-            <p>{data.Date}</p>
-            <FontAwesomeIcon icon={getWeatherIcon(data.WeatherCode)} size="3x" />
-            <p>Min temp. {data.MinTemperature} °C</p>
-            <p>Max temp. {data.MaxTemperature} °C</p>
-            <p>Energia {data.EstimatedGeneratedEnergy} kWh</p>
+        <div className={styles.wrapper}>
+            <div className={styles.icon}>
+                <FontAwesomeIcon icon={getWeatherIcon(data.WeatherCode)} size="3x" />
+            </div>
+            <div className={styles.info}>
+                <p>{data.Date}</p>
+                <p>Min temp. {data.MinTemperature} °C</p>
+                <p>Max temp. {data.MaxTemperature} °C</p>
+                <p>Energia {data.EstimatedGeneratedEnergy} kWh</p>
+            </div>
         </div>
-    )
+    );
 }
