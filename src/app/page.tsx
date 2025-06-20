@@ -37,7 +37,7 @@ export interface SummaryWeather {
     description: string;
 }
 
-export async function getWeeklyWeather(lat: number, lng:number): Promise<WeeklyWeather[]> {
+async function getWeeklyWeather(lat: number, lng:number): Promise<WeeklyWeather[]> {
     const params = new URLSearchParams({
         latitude: lat.toString(),
         longitude: lng.toString(),
@@ -53,7 +53,7 @@ export async function getWeeklyWeather(lat: number, lng:number): Promise<WeeklyW
     return res.json();
 }
 
-export async function getWeatherSummary(lat: number, lng: number): Promise<SummaryWeather> {
+async function getWeatherSummary(lat: number, lng: number): Promise<SummaryWeather> {
     const params = new URLSearchParams({
         latitude: lat.toString(),
         longitude: lng.toString(),
