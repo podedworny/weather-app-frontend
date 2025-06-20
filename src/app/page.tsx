@@ -42,8 +42,10 @@ export async function getWeeklyWeather(lat: number, lng:number): Promise<WeeklyW
         latitude: lat.toString(),
         longitude: lng.toString(),
     });
-    const res = await fetch(`http://localhost:8080/weather?${params.toString()}`,  {
-        method: "GET",
+    const baseUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
+
+    const res = await fetch(`${baseUrl}/weather?${params.toString()}`, {
+        method: 'GET',
     })
     if (!res.ok) {
         throw new Error(res.statusText);
