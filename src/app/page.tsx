@@ -9,8 +9,7 @@ import {geocodeByPlaceId, getLatLng} from "react-google-places-autocomplete";
 
 
 import 'leaflet/dist/leaflet.css';
-import {LatLng, latLng, LatLngExpression} from "leaflet";
-import {black} from "next/dist/lib/picocolors";
+import {LatLngExpression} from "leaflet";
 
 const GooglePlacesAutocomplete = dynamic(
     () => import('react-google-places-autocomplete'),
