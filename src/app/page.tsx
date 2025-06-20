@@ -58,8 +58,8 @@ async function getWeatherSummary(lat: number, lng: number): Promise<SummaryWeath
         latitude: lat.toString(),
         longitude: lng.toString(),
     })
-
-    const res = await fetch(`http://localhost:8080/weather/summary?${params.toString()}`, {
+    const baseUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
+    const res = await fetch(`${baseUrl}/weather/summary?${params.toString()}`, {
         method: "GET",
     })
     if (!res.ok) {
