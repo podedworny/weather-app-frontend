@@ -30,12 +30,12 @@ export default function WeatherWindow({data}: {data: WeeklyWeather}) {
     return (
         <div className={styles.wrapper}>
             <div className={styles.icon}>
-                <FontAwesomeIcon icon={getWeatherIcon(data.WeatherCode)} size="3x" />
+                <FontAwesomeIcon icon={getWeatherIcon(data.weatherCode)} size="3x" />
             </div>
             <div className={styles.info}>
-                <p>{data.Date}</p>
-                <p>Min temp. {data.MinTemperature} °C</p>
-                <p>Max temp. {data.MaxTemperature} °C</p>
+                <p>{data.date}</p>
+                <p>Min temp. {data.minTemperature} °C</p>
+                <p>Max temp. {data.maxTemperature} °C</p>
                 <p>
                     <span className={styles.energyTooltip} title="Szacowana energia wyprodukowana przez panele słoneczne">
                         Energia {data.EstimatedGeneratedEnergy} kWh

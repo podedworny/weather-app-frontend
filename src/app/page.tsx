@@ -10,6 +10,7 @@ import {geocodeByPlaceId, getLatLng} from "react-google-places-autocomplete";
 
 import 'leaflet/dist/leaflet.css';
 import {LatLng, latLng, LatLngExpression} from "leaflet";
+import {black} from "next/dist/lib/picocolors";
 
 const GooglePlacesAutocomplete = dynamic(
     () => import('react-google-places-autocomplete'),
@@ -22,11 +23,11 @@ const Map = dynamic (
 )
 
 export interface WeeklyWeather {
-    Date: string;
-    WeatherCode: number;
-    MinTemperature: number;
-    MaxTemperature: number;
-    EstimatedGeneratedEnergy: number;
+    date: string;
+    weatherCode: number;
+    minTemperature: number;
+    maxTemperature: number;
+    estimatedGeneratedEnergy: number;
 }
 
 export interface SummaryWeather {
@@ -91,6 +92,7 @@ export default function Home() {
                         menu: (provided) => ({
                             ...provided,
                             zIndex: 9999,
+                            color: 'black',
                         }),
                     },
                 }}
