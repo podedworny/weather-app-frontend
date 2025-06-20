@@ -14,8 +14,18 @@
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
+:global(.dark) .wrapper {
+    background-color: #2d2d2d;
+    border-color: #555;
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.08);
+}
+
 .wrapper:hover {
     border-color: #bbb;
+}
+
+:global(.dark) .wrapper:hover {
+    border-color: #777;
 }
 
 .icon {
@@ -28,6 +38,11 @@
     margin: 6px 0;
     color: #444;
     font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+:global(.dark) .info p {
+    color: #cccccc;
 }
 
 .info p:first-child {
@@ -35,6 +50,11 @@
     font-size: 1rem;
     color: #222;
     margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+:global(.dark) .info p:first-child {
+    color: #ffffff;
 }
 
 @media (max-width: 768px) {
@@ -67,7 +87,13 @@
         margin-bottom: 8px;
     }
 }
+
 .energyTooltip {
     cursor: help;
     border-bottom: 1px dotted #999;
+    transition: border-color 0.3s ease;
+}
+
+:global(.dark) .energyTooltip {
+    border-bottom-color: #666;
 }

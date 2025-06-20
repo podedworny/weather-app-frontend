@@ -10,8 +10,18 @@
     margin: 20px auto;
 }
 
+:global(.dark) .div {
+    background-color: #2d2d2d;
+    border-color: #555;
+}
+
 .div p {
     margin: 2px 0;
     font-size: 1.1rem;
     color: #333;
+    transition: color 0.3s ease;
+}
+
+:global(.dark) .div p {
+    color: #e5e5e5;
 }
